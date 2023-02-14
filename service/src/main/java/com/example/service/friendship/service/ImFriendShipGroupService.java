@@ -6,7 +6,7 @@ import com.example.service.friendship.model.req.DeleteFriendShipGroupReq;
 import com.yzhou.im.common.ResponseVO;
 
 /**
- * @author: Chackylee
+ * @author: yzhou
  * @description:
  **/
 public interface ImFriendShipGroupService {

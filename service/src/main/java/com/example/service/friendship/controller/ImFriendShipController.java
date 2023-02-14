@@ -3,7 +3,6 @@ package com.example.service.friendship.controller;
 import com.example.service.friendship.model.req.*;
 import com.example.service.friendship.service.ImFriendService;
 import com.yzhou.im.common.ResponseVO;
-import com.yzhou.im.common.model.SyncReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

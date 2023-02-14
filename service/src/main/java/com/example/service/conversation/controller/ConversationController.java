@@ -4,7 +4,6 @@ import com.example.service.conversation.model.DeleteConversationReq;
 import com.example.service.conversation.model.UpdateConversationReq;
 import com.example.service.conversation.service.ConversationService;
 import com.yzhou.im.common.ResponseVO;
-import com.yzhou.im.common.model.SyncReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;

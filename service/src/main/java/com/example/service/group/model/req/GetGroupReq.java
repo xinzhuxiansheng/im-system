@@ -4,7 +4,7 @@ import com.lld.im.common.model.RequestBase;
 import lombok.Data;
 
 /**
- * @author: Chackylee
+ * @author: yzhou
  * @description:
  **/
 @Data

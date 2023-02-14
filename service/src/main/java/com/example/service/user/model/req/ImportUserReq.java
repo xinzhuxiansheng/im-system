@@ -1,7 +1,6 @@
 package com.example.service.user.model.req;
 
 import com.example.service.user.dao.ImUserDataEntity;
-import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
 import java.util.List;

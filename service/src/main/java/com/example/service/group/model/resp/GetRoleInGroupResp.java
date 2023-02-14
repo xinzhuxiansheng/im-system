@@ -3,7 +3,7 @@ package com.example.service.group.model.resp;
 import lombok.Data;
 
 /**
- * @author: Chackylee
+ * @author: yzhou
  * @description:
  **/
 @Data

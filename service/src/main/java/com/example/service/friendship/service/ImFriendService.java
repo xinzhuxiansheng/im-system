@@ -2,8 +2,6 @@ package com.example.service.friendship.service;
 
 import com.example.service.friendship.model.req.*;
 import com.yzhou.im.common.ResponseVO;
-import com.yzhou.im.common.model.RequestBase;
-import com.yzhou.im.common.model.SyncReq;
 
 import java.util.List;
 

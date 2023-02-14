@@ -1,6 +1,5 @@
 package com.example.service.conversation.model;
 
-import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
 @Data
