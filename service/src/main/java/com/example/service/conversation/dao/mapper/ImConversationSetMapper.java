@@ -1,16 +1,11 @@
 package com.example.service.conversation.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.lld.im.service.conversation.dao.ImConversationSetEntity;
+import com.example.service.conversation.dao.ImConversationSetEntity;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
 import org.springframework.stereotype.Repository;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Repository
 public interface ImConversationSetMapper extends BaseMapper<ImConversationSetEntity> {
 
