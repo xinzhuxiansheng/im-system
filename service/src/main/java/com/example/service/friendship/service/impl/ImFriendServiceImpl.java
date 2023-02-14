@@ -6,6 +6,9 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
 import com.example.service.friendship.dao.ImFriendShipEntity;
 import com.example.service.friendship.dao.mapper.ImFriendShipMapper;
+import com.example.service.friendship.model.callback.AddFriendAfterCallbackDto;
+import com.example.service.friendship.model.callback.AddFriendBlackAfterCallbackDto;
+import com.example.service.friendship.model.callback.DeleteFriendAfterCallbackDto;
 import com.example.service.friendship.model.req.*;
 import com.example.service.friendship.model.resp.CheckFriendShipResp;
 import com.example.service.friendship.model.resp.ImportFriendShipResp;
@@ -13,10 +16,20 @@ import com.example.service.friendship.service.ImFriendService;
 import com.example.service.friendship.service.ImFriendShipRequestService;
 import com.example.service.user.dao.ImUserDataEntity;
 import com.example.service.user.service.ImUserService;
+import com.example.service.utils.CallbackService;
+import com.example.service.utils.MessageProducer;
+import com.example.service.utils.WriteUserSeq;
 import com.yzhou.im.common.ResponseVO;
+import com.yzhou.im.common.constant.Constants;
+import com.yzhou.im.common.enums.AllowFriendTypeEnum;
 import com.yzhou.im.common.enums.CheckFriendShipTypeEnum;
 import com.yzhou.im.common.enums.FriendShipErrorCode;
+import com.yzhou.im.common.enums.FriendShipStatusEnum;
+import com.yzhou.im.common.enums.command.FriendshipEventCommand;
+import com.yzhou.im.common.exception.ApplicationException;
 import com.yzhou.im.common.model.RequestBase;
+import com.yzhou.im.common.model.SyncReq;
+import com.yzhou.im.common.model.SyncResp;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -163,7 +176,7 @@ public class ImFriendServiceImpl implements ImFriendService {
             updateFriendPack.setRemark(req.getToItem().getRemark());
             updateFriendPack.setToId(req.getToItem().getToId());
             messageProducer.sendToUser(req.getFromId(),
-                    req.getClientType(),req.getImei(),FriendshipEventCommand
+                    req.getClientType(),req.getImei(), FriendshipEventCommand
             .FRIEND_UPDATE,updateFriendPack,req.getAppId());
 
             if (appConfig.isModifyFriendAfterCallback()) {

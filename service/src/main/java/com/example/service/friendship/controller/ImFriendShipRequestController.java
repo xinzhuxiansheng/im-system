@@ -1,10 +1,15 @@
 package com.example.service.friendship.controller;
 
+import com.example.service.friendship.model.req.ApproverFriendRequestReq;
+import com.example.service.friendship.model.req.GetFriendShipRequestReq;
+import com.example.service.friendship.model.req.ReadFriendShipRequestReq;
+import com.example.service.friendship.service.ImFriendShipRequestService;
 import com.lld.im.common.ResponseVO;
 import com.lld.im.service.friendship.model.req.ApproverFriendRequestReq;
 import com.lld.im.service.friendship.model.req.GetFriendShipRequestReq;
 import com.lld.im.service.friendship.model.req.ReadFriendShipRequestReq;
 import com.lld.im.service.friendship.service.ImFriendShipRequestService;
+import com.yzhou.im.common.ResponseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,7 +25,7 @@ public class ImFriendShipRequestController {
 
     @RequestMapping("/approveFriendRequest")
     public ResponseVO approveFriendRequest(@RequestBody @Validated
-                         ApproverFriendRequestReq req, Integer appId, String identifier){
+                                                   ApproverFriendRequestReq req, Integer appId, String identifier){
         req.setAppId(appId);
         req.setOperater(identifier);
         return imFriendShipRequestService.approverFriendRequest(req);

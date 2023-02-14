@@ -1,9 +1,9 @@
 package com.example.service.friendship.service;
 
-import com.lld.im.common.ResponseVO;
-import com.lld.im.service.friendship.dao.ImFriendShipGroupEntity;
-import com.lld.im.service.friendship.model.req.AddFriendShipGroupReq;
-import com.lld.im.service.friendship.model.req.DeleteFriendShipGroupReq;
+import com.example.service.friendship.dao.ImFriendShipGroupEntity;
+import com.example.service.friendship.model.req.AddFriendShipGroupReq;
+import com.example.service.friendship.model.req.DeleteFriendShipGroupReq;
+import com.yzhou.im.common.ResponseVO;
 
 /**
  * @author: Chackylee

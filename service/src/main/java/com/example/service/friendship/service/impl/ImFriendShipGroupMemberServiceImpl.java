@@ -1,6 +1,15 @@
 package com.example.service.friendship.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.service.friendship.dao.ImFriendShipGroupEntity;
+import com.example.service.friendship.dao.ImFriendShipGroupMemberEntity;
+import com.example.service.friendship.dao.mapper.ImFriendShipGroupMemberMapper;
+import com.example.service.friendship.model.req.AddFriendShipGroupMemberReq;
+import com.example.service.friendship.model.req.DeleteFriendShipGroupMemberReq;
+import com.example.service.friendship.service.ImFriendShipGroupMemberService;
+import com.example.service.friendship.service.ImFriendShipGroupService;
+import com.example.service.user.dao.ImUserDataEntity;
+import com.example.service.user.service.ImUserService;
 import com.lld.im.codec.pack.friendship.AddFriendGroupMemberPack;
 import com.lld.im.codec.pack.friendship.DeleteFriendGroupMemberPack;
 import com.lld.im.codec.proto.Message;
@@ -17,6 +26,7 @@ import com.lld.im.service.friendship.service.ImFriendShipGroupService;
 import com.lld.im.service.user.dao.ImUserDataEntity;
 import com.lld.im.service.user.service.ImUserService;
 import com.lld.im.service.utils.MessageProducer;
+import com.yzhou.im.common.ResponseVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -29,8 +39,7 @@ import java.util.List;
  * @description:
  **/
 @Service
-public class ImFriendShipGroupMemberServiceImpl
-        implements ImFriendShipGroupMemberService {
+public class ImFriendShipGroupMemberServiceImpl implements ImFriendShipGroupMemberService {
 
     @Autowired
     ImFriendShipGroupMemberMapper imFriendShipGroupMemberMapper;

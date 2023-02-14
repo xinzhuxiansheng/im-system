@@ -26,6 +26,9 @@
         <apache.httpclient.version>4.5.9</apache.httpclient.version>
         <fastjson.version>1.2.51</fastjson.version>
         <mybatis-plus.version>3.4.2</mybatis-plus.version>
+        <hutool.version>5.0.6</hutool.version>
+        <zkClient.version>0.1</zkClient.version>
+        <springboot.version>2.3.2.RELEASE</springboot.version>
     </properties>
 
     <dependencies>
@@ -104,6 +107,27 @@
                 <groupId>org.hibernate</groupId>
                 <artifactId>hibernate-validator</artifactId>
                 <version>${hibernate-validator.version}</version>
+            </dependency>
+
+            <!-- hutool -->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+
+            <!--  zkClient -->
+            <dependency>
+                <groupId>com.github.sgroschupf</groupId>
+                <artifactId>zkclient</artifactId>
+                <version>${zkClient.version}</version>
+            </dependency>
+
+            <!-- redis -->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-redis</artifactId>
+                <version>${springboot.version}</version>
             </dependency>
 
         </dependencies>

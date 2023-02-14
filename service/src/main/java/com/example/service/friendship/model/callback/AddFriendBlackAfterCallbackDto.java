@@ -2,11 +2,6 @@ package com.example.service.friendship.model.callback;
 
 import lombok.Data;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 public class AddFriendBlackAfterCallbackDto {
 

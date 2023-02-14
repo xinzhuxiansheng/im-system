@@ -1,9 +1,9 @@
 package com.example.service.friendship.service;
 
-import com.lld.im.common.ResponseVO;
-import com.lld.im.service.friendship.model.req.ApproverFriendRequestReq;
-import com.lld.im.service.friendship.model.req.FriendDto;
-import com.lld.im.service.friendship.model.req.ReadFriendShipRequestReq;
+import com.example.service.friendship.model.req.ApproverFriendRequestReq;
+import com.example.service.friendship.model.req.FriendDto;
+import com.example.service.friendship.model.req.ReadFriendShipRequestReq;
+import com.yzhou.im.common.ResponseVO;
 
 
 public interface ImFriendShipRequestService {
