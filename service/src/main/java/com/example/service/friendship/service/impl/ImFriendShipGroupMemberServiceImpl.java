@@ -1,6 +1,8 @@
 package com.example.service.friendship.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.example.codec.pack.friendship.AddFriendGroupMemberPack;
+import com.example.codec.pack.friendship.DeleteFriendGroupMemberPack;
 import com.example.service.friendship.dao.ImFriendShipGroupEntity;
 import com.example.service.friendship.dao.ImFriendShipGroupMemberEntity;
 import com.example.service.friendship.dao.mapper.ImFriendShipGroupMemberMapper;
@@ -13,6 +15,7 @@ import com.example.service.user.service.ImUserService;
 import com.example.service.utils.MessageProducer;
 import com.yzhou.im.common.ResponseVO;
 import com.yzhou.im.common.enums.command.FriendshipEventCommand;
+import com.yzhou.im.common.model.ClientInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

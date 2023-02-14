@@ -1,16 +1,11 @@
 package com.example.service.group.model.req;
 
-import com.lld.im.common.model.RequestBase;
+import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 import java.util.List;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 public class ImportGroupMemberReq extends RequestBase {
 

@@ -1,6 +1,7 @@
 package com.example.service.friendship.model.req;
 
 import com.yzhou.im.common.enums.FriendShipStatusEnum;
+import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;

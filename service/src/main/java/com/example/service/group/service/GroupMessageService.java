@@ -1,10 +1,17 @@
 package com.example.service.group.service;
 
+import com.example.codec.pack.message.ChatMessageAck;
 import com.example.service.group.model.req.SendGroupMessageReq;
+import com.example.service.message.model.resp.SendMessageResp;
+import com.example.service.seq.RedisSeq;
 import com.example.service.utils.MessageProducer;
 import com.yzhou.im.common.ResponseVO;
 import com.yzhou.im.common.constant.Constants;
 import com.yzhou.im.common.enums.command.GroupEventCommand;
+import com.yzhou.im.common.model.ClientInfo;
+import com.yzhou.im.common.model.message.GroupChatMessageContent;
+import com.yzhou.im.common.model.message.MessageContent;
+import com.yzhou.im.common.model.message.OfflineMessageContent;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -106,7 +113,7 @@ public class GroupMessageService {
         }
     }
 
-    private void ack(MessageContent messageContent,ResponseVO responseVO){
+    private void ack(MessageContent messageContent, ResponseVO responseVO){
 
         ChatMessageAck chatMessageAck = new ChatMessageAck(messageContent.getMessageId());
         responseVO.setData(chatMessageAck);

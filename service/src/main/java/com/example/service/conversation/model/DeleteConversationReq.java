@@ -1,5 +1,6 @@
 package com.example.service.conversation.model;
 
+import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;

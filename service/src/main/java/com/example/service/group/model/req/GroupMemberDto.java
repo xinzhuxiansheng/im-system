@@ -2,12 +2,6 @@ package com.example.service.group.model.req;
 
 import lombok.Data;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
-
 @Data
 public class GroupMemberDto {
 

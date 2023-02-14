@@ -3,7 +3,9 @@ package com.example.service.utils;
 import com.alibaba.fastjson.JSONObject;
 import com.yzhou.im.common.constant.Constants;
 import com.yzhou.im.common.enums.ImConnectStatusEnum;
+import com.yzhou.im.common.model.UserSession;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -20,7 +22,7 @@ public class UserSessionUtils {
 
     //1.获取用户所有的session
 
-    public List<UserSession> getUserSession(Integer appId,String userId){
+    public List<UserSession> getUserSession(Integer appId, String userId){
 
         String userSessionKey = appId + Constants.RedisConstants.UserSessionConstants
                 + userId;

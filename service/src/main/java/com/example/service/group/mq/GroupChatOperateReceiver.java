@@ -3,15 +3,13 @@ package com.example.service.group.mq;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
-import com.lld.im.common.constant.Constants;
-import com.lld.im.common.enums.command.GroupEventCommand;
-import com.lld.im.common.enums.command.MessageCommand;
-import com.lld.im.common.model.message.GroupChatMessageContent;
-import com.lld.im.common.model.message.MessageReadedContent;
-import com.lld.im.service.group.service.GroupMessageService;
-import com.lld.im.service.message.service.MessageSyncService;
-import com.lld.im.service.message.service.P2PMessageService;
+import com.example.service.group.service.GroupMessageService;
+import com.example.service.message.service.MessageSyncService;
 import com.rabbitmq.client.Channel;
+import com.yzhou.im.common.constant.Constants;
+import com.yzhou.im.common.enums.command.GroupEventCommand;
+import com.yzhou.im.common.model.message.GroupChatMessageContent;
+import com.yzhou.im.common.model.message.MessageReadedContent;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.amqp.core.Message;
@@ -27,11 +25,6 @@ import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Component
 public class GroupChatOperateReceiver {
 
@@ -40,7 +33,7 @@ public class GroupChatOperateReceiver {
 //    @Autowired
 //    P2PMessageService p2PMessageService;
     @Autowired
-    GroupMessageService groupMessageService;
+GroupMessageService groupMessageService;
 
     @Autowired
     MessageSyncService messageSyncService;

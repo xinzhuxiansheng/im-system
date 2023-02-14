@@ -2,10 +2,6 @@ package com.example.service.group.model.resp;
 
 import lombok.Data;
 
-/**
- * @author: yzhou
- * @description:
- **/
 @Data
 public class GetRoleInGroupResp {
 

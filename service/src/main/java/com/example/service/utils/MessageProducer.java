@@ -1,7 +1,11 @@
 package com.example.service.utils;
 
 import com.alibaba.fastjson.JSONObject;
+import com.example.codec.proto.MessagePack;
+import com.yzhou.im.common.constant.Constants;
 import com.yzhou.im.common.enums.command.Command;
+import com.yzhou.im.common.model.ClientInfo;
+import com.yzhou.im.common.model.UserSession;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,7 +29,7 @@ public class MessageProducer {
 
     private String queueName = Constants.RabbitConstants.MessageService2Im;
 
-    public boolean sendMessage(UserSession session,Object msg){
+    public boolean sendMessage(UserSession session, Object msg){
         try {
             logger.info("send message == " + msg);
             rabbitTemplate.convertAndSend(queueName,session.getBrokerId()+"",msg);
@@ -52,7 +56,7 @@ public class MessageProducer {
     }
 
     //发送给所有端的方法
-    public List<ClientInfo> sendToUser(String toId,Command command,Object data,Integer appId){
+    public List<ClientInfo> sendToUser(String toId, Command command, Object data, Integer appId){
         List<UserSession> userSession
                 = userSessionUtils.getUserSession(appId, toId);
         List<ClientInfo> list = new ArrayList<>();

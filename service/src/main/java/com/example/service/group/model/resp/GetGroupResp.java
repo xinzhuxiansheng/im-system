@@ -1,14 +1,10 @@
 package com.example.service.group.model.resp;
 
-import com.lld.im.service.group.model.req.GroupMemberDto;
+import com.example.service.group.model.req.GroupMemberDto;
 import lombok.Data;
 
 import java.util.List;
 
-/**
- * @author: yzhou
- * @description:
- **/
 @Data
 public class GetGroupResp {
 

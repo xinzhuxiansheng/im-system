@@ -1,13 +1,8 @@
 package com.example.service.group.model.req;
 
-import com.lld.im.common.model.RequestBase;
+import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 public class SendGroupMessageReq extends RequestBase {
 
