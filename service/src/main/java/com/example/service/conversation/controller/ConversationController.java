@@ -1,22 +1,17 @@
 package com.example.service.conversation.controller;
 
-import com.lld.im.common.ResponseVO;
-import com.lld.im.common.model.SyncReq;
-import com.lld.im.service.conversation.model.DeleteConversationReq;
-import com.lld.im.service.conversation.model.UpdateConversationReq;
-import com.lld.im.service.conversation.service.ConversationService;
-import com.lld.im.service.group.model.req.ImportGroupReq;
+import com.example.service.conversation.model.DeleteConversationReq;
+import com.example.service.conversation.model.UpdateConversationReq;
+import com.example.service.conversation.service.ConversationService;
+import com.yzhou.im.common.ResponseVO;
+import com.yzhou.im.common.model.SyncReq;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
+
 @RestController
 @RequestMapping("v1/conversation")
 public class ConversationController {

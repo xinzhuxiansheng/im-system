@@ -6,34 +6,28 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.lld.im.codec.pack.group.AddGroupMemberPack;
-import com.lld.im.codec.pack.group.GroupMemberSpeakPack;
-import com.lld.im.codec.pack.group.RemoveGroupMemberPack;
-import com.lld.im.codec.pack.group.UpdateGroupMemberPack;
-import com.lld.im.common.ResponseVO;
-import com.lld.im.common.config.AppConfig;
-import com.lld.im.common.constant.Constants;
-import com.lld.im.common.enums.GroupErrorCode;
-import com.lld.im.common.enums.GroupMemberRoleEnum;
-import com.lld.im.common.enums.GroupStatusEnum;
-import com.lld.im.common.enums.GroupTypeEnum;
-import com.lld.im.common.enums.command.GroupEventCommand;
-import com.lld.im.common.exception.ApplicationException;
-import com.lld.im.common.model.ClientInfo;
-import com.lld.im.service.group.dao.ImGroupEntity;
-import com.lld.im.service.group.dao.ImGroupMemberEntity;
-import com.lld.im.service.group.dao.mapper.ImGroupMemberMapper;
-import com.lld.im.service.group.model.callback.AddMemberAfterCallback;
-import com.lld.im.service.group.model.callback.DestroyGroupCallbackDto;
-import com.lld.im.service.group.model.req.*;
-import com.lld.im.service.group.model.resp.AddMemberResp;
-import com.lld.im.service.group.model.resp.GetRoleInGroupResp;
-import com.lld.im.service.group.service.ImGroupMemberService;
-import com.lld.im.service.group.service.ImGroupService;
-import com.lld.im.service.user.dao.ImUserDataEntity;
-import com.lld.im.service.user.service.ImUserService;
-import com.lld.im.service.utils.CallbackService;
-import com.lld.im.service.utils.GroupMessageProducer;
+import com.example.service.group.dao.ImGroupEntity;
+import com.example.service.group.dao.ImGroupMemberEntity;
+import com.example.service.group.dao.mapper.ImGroupMemberMapper;
+import com.example.service.group.model.callback.AddMemberAfterCallback;
+import com.example.service.group.model.req.*;
+import com.example.service.group.model.resp.AddMemberResp;
+import com.example.service.group.model.resp.GetRoleInGroupResp;
+import com.example.service.group.service.ImGroupMemberService;
+import com.example.service.group.service.ImGroupService;
+import com.example.service.user.dao.ImUserDataEntity;
+import com.example.service.user.service.ImUserService;
+import com.example.service.utils.CallbackService;
+import com.example.service.utils.GroupMessageProducer;
+import com.yzhou.im.common.ResponseVO;
+import com.yzhou.im.common.config.AppConfig;
+import com.yzhou.im.common.constant.Constants;
+import com.yzhou.im.common.enums.GroupErrorCode;
+import com.yzhou.im.common.enums.GroupMemberRoleEnum;
+import com.yzhou.im.common.enums.GroupStatusEnum;
+import com.yzhou.im.common.enums.GroupTypeEnum;
+import com.yzhou.im.common.enums.command.GroupEventCommand;
+import com.yzhou.im.common.exception.ApplicationException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -43,11 +37,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.*;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Service
 @Slf4j
 public class ImGroupMemberServiceImpl implements ImGroupMemberService {

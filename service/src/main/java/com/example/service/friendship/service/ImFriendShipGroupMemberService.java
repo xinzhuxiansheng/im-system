@@ -1,13 +1,9 @@
 package com.example.service.friendship.service;
 
-import com.lld.im.common.ResponseVO;
-import com.lld.im.service.friendship.model.req.AddFriendShipGroupMemberReq;
-import com.lld.im.service.friendship.model.req.DeleteFriendShipGroupMemberReq;
+import com.example.service.friendship.model.req.AddFriendShipGroupMemberReq;
+import com.example.service.friendship.model.req.DeleteFriendShipGroupMemberReq;
+import com.yzhou.im.common.ResponseVO;
 
-/**
- * @author: Chackylee
- * @description:
- **/
 public interface ImFriendShipGroupMemberService {
 
     public ResponseVO addGroupMember(AddFriendShipGroupMemberReq req);

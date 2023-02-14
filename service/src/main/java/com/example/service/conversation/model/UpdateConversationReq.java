@@ -1,13 +1,8 @@
 package com.example.service.conversation.model;
 
-import com.lld.im.common.model.RequestBase;
+import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 public class UpdateConversationReq extends RequestBase {
 
@@ -18,6 +13,4 @@ public class UpdateConversationReq extends RequestBase {
     private Integer isTop;
 
     private String fromId;
-
-
 }

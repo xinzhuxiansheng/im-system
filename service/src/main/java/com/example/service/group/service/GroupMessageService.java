@@ -1,20 +1,10 @@
 package com.example.service.group.service;
 
-import com.lld.im.codec.pack.message.ChatMessageAck;
-import com.lld.im.common.ResponseVO;
-import com.lld.im.common.constant.Constants;
-import com.lld.im.common.enums.command.GroupEventCommand;
-import com.lld.im.common.enums.command.MessageCommand;
-import com.lld.im.common.model.ClientInfo;
-import com.lld.im.common.model.message.GroupChatMessageContent;
-import com.lld.im.common.model.message.MessageContent;
-import com.lld.im.common.model.message.OfflineMessageContent;
-import com.lld.im.service.group.model.req.SendGroupMessageReq;
-import com.lld.im.service.message.model.resp.SendMessageResp;
-import com.lld.im.service.message.service.CheckSendMessageService;
-import com.lld.im.service.message.service.MessageStoreService;
-import com.lld.im.service.seq.RedisSeq;
-import com.lld.im.service.utils.MessageProducer;
+import com.example.service.group.model.req.SendGroupMessageReq;
+import com.example.service.utils.MessageProducer;
+import com.yzhou.im.common.ResponseVO;
+import com.yzhou.im.common.constant.Constants;
+import com.yzhou.im.common.enums.command.GroupEventCommand;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -26,11 +16,6 @@ import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Service
 public class GroupMessageService {
 
@@ -77,7 +62,7 @@ public class GroupMessageService {
         if(messageFromMessageIdCache != null){
             threadPoolExecutor.execute(() ->{
                 //1.回ack成功给自己
-                ack(messageContent,ResponseVO.successResponse());
+                ack(messageContent, ResponseVO.successResponse());
                 //2.发消息给同步在线端
                 syncToSender(messageContent,messageContent);
                 //3.发消息给对方在线端

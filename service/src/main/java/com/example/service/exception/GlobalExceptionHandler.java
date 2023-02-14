@@ -1,8 +1,8 @@
 package com.example.service.exception;
 
-import com.lld.im.common.BaseErrorCode;
-import com.lld.im.common.ResponseVO;
-import com.lld.im.common.exception.ApplicationException;
+import com.yzhou.im.common.BaseErrorCode;
+import com.yzhou.im.common.ResponseVO;
+import com.yzhou.im.common.exception.ApplicationException;
 import org.hibernate.validator.internal.engine.path.PathImpl;
 import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;

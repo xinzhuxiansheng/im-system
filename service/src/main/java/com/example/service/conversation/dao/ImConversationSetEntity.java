@@ -3,10 +3,6 @@ package com.example.service.conversation.dao;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-/**
- * @author: Chackylee
- * @description:
- **/
 @Data
 @TableName("im_conversation_set")
 public class ImConversationSetEntity {

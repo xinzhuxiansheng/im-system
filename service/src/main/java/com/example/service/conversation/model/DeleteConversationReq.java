@@ -1,15 +1,10 @@
 package com.example.service.conversation.model;
 
-import com.lld.im.common.model.RequestBase;
+import com.yzhou.im.common.model.RequestBase;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 public class DeleteConversationReq extends RequestBase {
 

@@ -4,34 +4,28 @@ import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.toolkit.CollectionUtils;
-import com.lld.im.codec.pack.group.CreateGroupPack;
-import com.lld.im.codec.pack.group.DestroyGroupPack;
-import com.lld.im.codec.pack.group.UpdateGroupInfoPack;
-import com.lld.im.common.ResponseVO;
-import com.lld.im.common.config.AppConfig;
-import com.lld.im.common.constant.Constants;
-import com.lld.im.common.enums.GroupErrorCode;
-import com.lld.im.common.enums.GroupMemberRoleEnum;
-import com.lld.im.common.enums.GroupStatusEnum;
-import com.lld.im.common.enums.GroupTypeEnum;
-import com.lld.im.common.enums.command.GroupEventCommand;
-import com.lld.im.common.exception.ApplicationException;
-import com.lld.im.common.model.ClientInfo;
-import com.lld.im.common.model.SyncReq;
-import com.lld.im.common.model.SyncResp;
-import com.lld.im.service.conversation.dao.ImConversationSetEntity;
-import com.lld.im.service.group.dao.ImGroupEntity;
-import com.lld.im.service.group.dao.mapper.ImGroupMapper;
-import com.lld.im.service.group.model.callback.DestroyGroupCallbackDto;
-import com.lld.im.service.group.model.req.*;
-import com.lld.im.service.group.model.resp.GetGroupResp;
-import com.lld.im.service.group.model.resp.GetJoinedGroupResp;
-import com.lld.im.service.group.model.resp.GetRoleInGroupResp;
-import com.lld.im.service.group.service.ImGroupMemberService;
-import com.lld.im.service.group.service.ImGroupService;
-import com.lld.im.service.seq.RedisSeq;
-import com.lld.im.service.utils.CallbackService;
-import com.lld.im.service.utils.GroupMessageProducer;
+import com.example.service.group.dao.ImGroupEntity;
+import com.example.service.group.dao.mapper.ImGroupMapper;
+import com.example.service.group.model.callback.DestroyGroupCallbackDto;
+import com.example.service.group.model.req.*;
+import com.example.service.group.model.resp.GetGroupResp;
+import com.example.service.group.model.resp.GetJoinedGroupResp;
+import com.example.service.group.model.resp.GetRoleInGroupResp;
+import com.example.service.group.service.ImGroupMemberService;
+import com.example.service.group.service.ImGroupService;
+import com.example.service.utils.CallbackService;
+import com.example.service.utils.GroupMessageProducer;
+import com.yzhou.im.common.ResponseVO;
+import com.yzhou.im.common.config.AppConfig;
+import com.yzhou.im.common.constant.Constants;
+import com.yzhou.im.common.enums.GroupErrorCode;
+import com.yzhou.im.common.enums.GroupMemberRoleEnum;
+import com.yzhou.im.common.enums.GroupStatusEnum;
+import com.yzhou.im.common.enums.GroupTypeEnum;
+import com.yzhou.im.common.enums.command.GroupEventCommand;
+import com.yzhou.im.common.exception.ApplicationException;
+import com.yzhou.im.common.model.SyncReq;
+import com.yzhou.im.common.model.SyncResp;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -43,11 +37,6 @@ import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Service
 public class ImGroupServiceImpl implements ImGroupService {
 
