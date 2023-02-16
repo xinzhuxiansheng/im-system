@@ -10,8 +10,9 @@
     </parent>
 
     <groupId>com.example</groupId>
-    <artifactId>service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <artifactId>im-service</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
     <name>service</name>
     <description>service</description>
     <properties>
@@ -37,7 +38,7 @@
 
         <dependency>
             <groupId>org.example</groupId>
-            <artifactId>common</artifactId>
+            <artifactId>im-common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

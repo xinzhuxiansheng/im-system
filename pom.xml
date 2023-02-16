@@ -8,9 +8,10 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>common</module>
-        <module>service</module>
-        <module>codec</module>
+        <module>im-common</module>
+        <module>im-service</module>
+        <module>im-codec</module>
+        <module>im-tcp</module>
     </modules>
 
     <parent>
@@ -33,6 +34,8 @@
         <redisson.version>3.15.6</redisson.version>
         <snakeyaml.version>1.27</snakeyaml.version>
         <rabbit.client.version>5.6.0</rabbit.client.version>
+        <netty.version>4.1.35.Final</netty.version>
+        <feign.version>8.18.0</feign.version>
     </properties>
 
     <dependencies>
@@ -158,6 +161,25 @@
                 <groupId>com.rabbitmq</groupId>
                 <artifactId>amqp-client</artifactId>
                 <version>${rabbit.client.version}</version>
+            </dependency>
+
+            <!-- netty -->
+            <dependency>
+                <groupId>io.netty</groupId>
+                <artifactId>netty-all</artifactId>
+                <version>${netty.version}</version>
+            </dependency>
+
+            <!-- feign调用依赖 -->
+            <dependency>
+                <groupId>com.netflix.feign</groupId>
+                <artifactId>feign-core</artifactId>
+                <version>${feign.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.netflix.feign</groupId>
+                <artifactId>feign-jackson</artifactId>
+                <version>${feign.version}</version>
             </dependency>
 
         </dependencies>
