@@ -4,6 +4,7 @@ package com.example.service.group.service;
 import com.example.service.group.dao.ImGroupEntity;
 import com.example.service.group.model.req.*;
 import com.yzhou.im.common.ResponseVO;
+import com.yzhou.im.common.model.SyncReq;
 
 public interface ImGroupService {
 

@@ -14,7 +14,6 @@ public class BootstrapConfig {
 
     private TcpConfig lim;
 
-
     @Data
     public static class TcpConfig {
         private Integer tcpPort;// tcp 绑定的端口号

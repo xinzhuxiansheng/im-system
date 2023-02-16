@@ -1,11 +1,15 @@
 package com.example.service.utils;
 
 import com.alibaba.fastjson.JSONObject;
+import com.example.codec.pack.group.AddGroupMemberPack;
+import com.example.codec.pack.group.RemoveGroupMemberPack;
+import com.example.codec.pack.group.UpdateGroupMemberPack;
 import com.example.service.group.model.req.GroupMemberDto;
 import com.example.service.group.service.ImGroupMemberService;
 import com.yzhou.im.common.ClientType;
 import com.yzhou.im.common.enums.command.Command;
 import com.yzhou.im.common.enums.command.GroupEventCommand;
+import com.yzhou.im.common.model.ClientInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 

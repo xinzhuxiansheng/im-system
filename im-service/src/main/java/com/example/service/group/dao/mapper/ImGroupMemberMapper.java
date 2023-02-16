@@ -1,8 +1,8 @@
 package com.example.service.group.dao.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.lld.im.service.group.dao.ImGroupMemberEntity;
-import com.lld.im.service.group.model.req.GroupMemberDto;
+import com.example.service.group.dao.ImGroupMemberEntity;
+import com.example.service.group.model.req.GroupMemberDto;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;

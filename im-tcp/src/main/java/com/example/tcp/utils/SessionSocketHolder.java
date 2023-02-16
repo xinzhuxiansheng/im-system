@@ -2,6 +2,7 @@ package com.example.tcp.utils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.example.codec.pack.user.UserStatusChangeNotifyPack;
+import com.example.codec.proto.MessageHeader;
 import com.example.tcp.publish.MqMessageProducer;
 import com.example.tcp.redis.RedisManager;
 import com.yzhou.im.common.constant.Constants;

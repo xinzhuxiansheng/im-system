@@ -18,14 +18,12 @@ import java.net.UnknownHostException;
 
 public class Starter {
 
-
 //    HTTP GET POST PUT DELETE 1.0 1.1 2.0
     //client IOS 安卓 pc(windows mac) web //支持json 也支持 protobuf
     //appId
     //28 + imei + body
     //请求头（指令 版本 clientType 消息解析类型 imei长度 appId bodylen）+ imei号 + 请求体
     //len+body
-
 
     public static void main(String[] args)  {
         if(args.length > 0){

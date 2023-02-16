@@ -5,11 +5,6 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 @TableName("im_group_member")
 public class ImGroupMemberEntity {

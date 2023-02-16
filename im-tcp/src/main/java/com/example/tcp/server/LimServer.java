@@ -1,6 +1,7 @@
 package com.example.tcp.server;
 
 import com.example.codec.MessageDecoder;
+import com.example.codec.MessageEncoder;
 import com.example.codec.config.BootstrapConfig;
 import com.example.tcp.handler.HeartBeatHandler;
 import com.example.tcp.handler.NettyServerHandler;
@@ -15,7 +16,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class LimServer {
-
     private final static Logger logger = LoggerFactory.getLogger(LimServer.class);
     BootstrapConfig.TcpConfig config;
     EventLoopGroup mainGroup;

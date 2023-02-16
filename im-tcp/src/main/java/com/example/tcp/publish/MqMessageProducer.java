@@ -4,6 +4,7 @@ package com.example.tcp.publish;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.example.codec.proto.Message;
+import com.example.codec.proto.MessageHeader;
 import com.example.tcp.utils.MqFactory;
 import com.rabbitmq.client.Channel;
 import com.yzhou.im.common.constant.Constants;

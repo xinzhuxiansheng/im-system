@@ -3,10 +3,6 @@ package com.example.service.group.dao;
 import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
 
-/**
- * @author: yzhou
- * @description:
- **/
 @Data
 @TableName("im_group_message_history")
 public class ImGroupMessageHistoryEntity {
