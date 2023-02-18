@@ -2,7 +2,7 @@ package com.example.codec;
 
 
 import com.alibaba.fastjson.JSONObject;
-import com.lld.im.codec.proto.MessagePack;
+import com.example.codec.proto.MessagePack;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;

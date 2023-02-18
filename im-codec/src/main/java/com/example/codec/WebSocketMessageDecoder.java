@@ -1,7 +1,7 @@
 package com.example.codec;
 
-import com.lld.im.codec.proto.Message;
-import com.lld.im.codec.utils.ByteBufToMessageUtils;
+import com.example.codec.proto.Message;
+import com.example.codec.utils.ByteBufToMessageUtils;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.MessageToMessageDecoder;

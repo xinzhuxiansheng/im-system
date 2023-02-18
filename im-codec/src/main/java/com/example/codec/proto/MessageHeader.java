@@ -2,11 +2,6 @@ package com.example.codec.proto;
 
 import lombok.Data;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 public class MessageHeader {
 

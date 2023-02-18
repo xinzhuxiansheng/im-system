@@ -1,8 +1,8 @@
 package com.example.codec.utils;
 
 import com.alibaba.fastjson.JSONObject;
-import com.lld.im.codec.proto.Message;
-import com.lld.im.codec.proto.MessageHeader;
+import com.example.codec.proto.Message;
+import com.example.codec.proto.MessageHeader;
 import io.netty.buffer.ByteBuf;
 
 /**
@@ -46,6 +46,7 @@ public class ByteBufToMessageUtils {
         /** 获取bodyLen*/
         int bodyLen = in.readInt();
 
+        // 处理拆包，粘包问题
         if(in.readableBytes() < bodyLen + imeiLength){
             in.resetReaderIndex();
             return null;

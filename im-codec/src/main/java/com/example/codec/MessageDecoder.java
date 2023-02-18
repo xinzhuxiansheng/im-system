@@ -1,10 +1,7 @@
 package com.example.codec;
 
-import com.alibaba.fastjson.JSONObject;
-import com.lld.im.codec.proto.Message;
-import com.lld.im.codec.proto.MessageHeader;
-import com.lld.im.codec.utils.ByteBufToMessageUtils;
-import com.sun.org.apache.bcel.internal.generic.NEW;
+import com.example.codec.proto.Message;
+import com.example.codec.utils.ByteBufToMessageUtils;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.ByteToMessageDecoder;
@@ -13,8 +10,6 @@ import java.util.List;
 
 /**
  * @description: 消息解码类
- * @author: lld
- * @version: 1.0
  */
 public class MessageDecoder extends ByteToMessageDecoder {
 

@@ -2,11 +2,6 @@ package com.example.codec.pack.conversation;
 
 import lombok.Data;
 
-/**
- * @description:
- * @author: lld
- * @version: 1.0
- */
 @Data
 public class UpdateConversationPack {
 

@@ -1,7 +1,7 @@
 package com.yzhou.im.common.utils;
 
 import com.alibaba.fastjson.JSON;
-import com.lld.im.common.config.GlobalHttpClientConfig;
+import com.yzhou.im.common.config.GlobalHttpClientConfig;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
