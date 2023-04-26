@@ -5,3 +5,9 @@
 .project
 .factorypath
 .settings/
+/logs
+/im-service/target
+/im-codec/target
+/im-common/target
+/im-message-store/target
+/im-tcp/target
