@@ -4,12 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>im-system</artifactId>
-        <groupId>org.example</groupId>
+        <groupId>com.yzhou</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>im-codec</artifactId>
+    <groupId>com.yzhou</groupId>
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -22,7 +24,6 @@
         <dependency>
             <groupId>io.netty</groupId>
             <artifactId>netty-all</artifactId>
-            <version>4.1.35.Final</version>
         </dependency>
 
         <!-- fastjson -->
@@ -34,9 +35,10 @@
 
         <!-- common -->
         <dependency>
-            <groupId>org.example</groupId>
-            <artifactId>common</artifactId>
+            <groupId>com.yzhou</groupId>
+            <artifactId>im-common</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
 
 
